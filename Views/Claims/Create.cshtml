@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Submit Claim";
+}
+
+<h2>Submit Monthly Claim</h2>
+
+<form method="post" action="/Claims/Create">
+    <label>Month & Year</label><br />
+    <input type="text" name="month" placeholder="e.g., August 2025" /><br /><br />
+
+    <label>Hours Worked</label><br />
+    <input type="number" name="hours" placeholder="Enter total hours" /><br /><br />
+
+    <label>Hourly Rate</label><br />
+    <input type="number" step="0.01" name="rate" placeholder="Enter hourly rate" /><br /><br />
+
+    <label>Upload Supporting Document</label><br />
+    <input type="text" name="documentName" placeholder="Timesheet.pdf" /><br /><br />
+
+    <button type="submit">Submit</button>
+    <button type="reset">Cancel</button>
+</form>
+
+@if (ViewBag.month != null)
+{
+    <hr />
+    <h3>Claim Submitted:</h3>
+    <p><strong>Month:</strong> @ViewBag.month</p>
+    <p><strong>Hours Worked:</strong> @ViewBag.hours</p>
+    <p><strong>Hourly Rate:</strong> @ViewBag.rate</p>
+    <p><strong>Total Amount:</strong> @ViewBag.total</p>
+    <p><strong>Document:</strong> @ViewBag.document</p>
+    <p><strong>Status:</strong> @ViewBag.status</p>
+}
+

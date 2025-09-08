@@ -1,0 +1,87 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Report";
+}
+
+<h2>Reports</h2>
+
+@if (ViewBag.Role == "Lecturer")
+{
+    <p>Showing your submitted claims only:</p>
+    <table>
+        <tr>
+            <th>Month</th>
+            <th>Hours</th>
+            <th>Rate</th>
+            <th>Total</th>
+            <th>Status</th>
+        </tr>
+
+        @foreach (var claim in ViewBag.Claims)
+        {
+            if (claim.Lecturer == "Mr. Magwaza")  
+            {
+                <tr>
+                    <td>@claim.Month</td>
+                    <td>@claim.Hours</td>
+                    <td>@claim.Rate</td>
+                    <td>@claim.Total</td>
+                    <td>@claim.Status</td>
+                </tr>
+            }
+        }
+    </table>
+}
+else if (ViewBag.Role == "PC")
+{
+    <p>Review pending claims for approval:</p>
+    <table>
+        <tr>
+            <th>Month</th>
+            <th>Lecturer</th>
+            <th>Total</th>
+            <th>Status</th>
+            <th>Action</th>
+        </tr>
+        @foreach (var claim in ViewBag.Claims)
+        {
+            <tr>
+                <td>@claim.Month</td>
+                <td>@claim.Lecturer</td>
+                <td>@claim.Total</td>
+                <td>@claim.Status</td>
+                <td>
+                    <a href="#">Approve</a> | <a href="#">Reject</a>
+                </td>
+            </tr>
+        }
+    </table>
+}
+else if (ViewBag.Role == "PM")
+{
+    <p>Summary of all claims:</p>
+    <table>
+        <tr>
+            <th>Month</th>
+            <th>Lecturer</th>
+            <th>Total Amount</th>
+            <th>Status</th>
+        </tr>
+        @foreach (var claim in ViewBag.Claims)
+        {
+            <tr>
+                <td>@claim.Month</td>
+                <td>@claim.Lecturer</td>
+                <td>@claim.Total</td>
+                <td>@claim.Status</td>
+            </tr>
+        }
+    </table>
+}
+else
+{
+    <p>No role specified.</p>
+}
+

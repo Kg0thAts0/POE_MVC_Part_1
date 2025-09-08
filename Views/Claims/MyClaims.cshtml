@@ -1,0 +1,71 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "My Claims";
+}
+
+<h2>My Claims</h2>
+
+
+<table border="1" cellpadding="5">
+    <tr>
+        <th>Month</th>
+        <th>Total Hours</th>
+        <th>Hourly Rate</th>
+        <th>Total Amount</th>
+        <th>Status</th>
+        <th>Document</th>
+        <th>Action</th>
+    </tr>
+    <tr>
+        <td>June</td>
+        <td>67</td>
+        <td>100</td>
+        <td>6700</td>
+        <td>Pending</td>
+        <td>claim1.pdf</td>
+        <td>
+            <a href="/Claims/Details"> 
+                cancel
+            </a>
+            <a href="/Claims/MyClaims">
+                Edit
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>August</td>
+        <td>6</td>
+        <td>100</td>
+        <td>600</td>
+        <td>Approved</td>
+        <td>claim4.pdf</td>
+        <td>
+            <a href="/Claims/Details">
+                cancel
+            </a>
+            <a href="/Claims/MyClaims">
+                Edit
+            </a>
+        </td>
+    </tr>
+    <tr>
+        <td>November</td>
+        <td>11</td>
+        <td>100</td>
+        <td>1100</td>
+        <td>Rejected</td>
+        <td>claim2.pdf</td>
+        <td>
+            <a href="/Claims/Details">
+                cancel
+            </a>
+            <a href="/Claims/MyClaims">
+                Edit
+            </a>
+        </td>
+    </tr>
+</table>
+
+

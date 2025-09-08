@@ -1,0 +1,25 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Claim Details";
+}
+
+<h2>Claim Details</h2>
+
+@if (ViewBag.month != null)
+{
+    <p><strong>Month:</strong> @ViewBag.month</p>
+    <p><strong>Hours Worked:</strong> @ViewBag.hours</p>
+    <p><strong>Hourly Rate:</strong> @ViewBag.rate</p>
+    <p><strong>Total Amount:</strong> @ViewBag.total</p>
+    <p><strong>Status:</strong> @ViewBag.status</p>
+    <p><strong>Document:</strong> @ViewBag.document</p>
+}
+else
+{
+    <p>No claim selected.</p>
+}
+
+<button onclick="window.location.href='/Claims/MyClaims'">Back to My Claims</button>
+
