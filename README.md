@@ -43,4 +43,4 @@ All pages simulate user interaction using ViewBag and simple redirects.
 
 
 ## Author
-- Developed as part of a Contract Monthly Claims System project.  
+- Developed by Kgothatso Magwaza  
