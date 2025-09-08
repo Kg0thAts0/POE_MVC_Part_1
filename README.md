@@ -9,25 +9,25 @@ All pages simulate user interaction using ViewBag and simple redirects.
 
 
 ## Features
--Home Page: Welcome screen with navigation to Login/Register.  
--Registration: Users (Lecturers, PCs, PMs) can "register" (no data is stored).  
--Login: Users log in by entering credentials and selecting their role.  
--Role Dashboards:  
+1. Home Page: Welcome screen with navigation to Login/Register.  
+2. Registration: Users (Lecturers, PCs, PMs) can "register" (no data is stored).  
+3. Login: Users log in by entering credentials and selecting their role.  
+4. Role Dashboards:  
   -Lecturer Dashboard → Submit/View Claims.  
   -Program Coordinator Dashboard (PC) → Review/Approve Claims.  
   -Program Manager Dashboard (PM) → View Reports.  
--Claims Pages: Simulated submission and detail view for lecturer claims.  
--Reports Page: Displays a static placeholder for PM reports.  
--Logout Page: Confirms logout and links back to login.  
--Navigation Bar: Styled links available across all pages.  
+5. Claims Pages: Simulated submission and detail view for lecturer claims.  
+6. Reports Page: Displays a static placeholder for PM reports.  
+7. Logout Page: Confirms logout and links back to login.  
+8. Navigation Bar: Styled links available across all pages.  
 
 
 ## Technologies
--ASP.NET Core MVC
--C#
--Razor View
--HTML
--CSS
+1. ASP.NET Core MVC
+2. C#
+3. Razor View
+4. HTML
+5. CSS
 
 ## User Flow
 1. Open the Home page → Click Login or Register.  
@@ -36,11 +36,17 @@ All pages simulate user interaction using ViewBag and simple redirects.
 3. Login with a Username, Password, and Role selection.  
 4. Redirects to the corresponding Dashboard.  
 5. From the dashboard, users can:  
-   - Lecturers → Manage Claims  
-   - PCs → Review Claims  
-   - PMs → View Reports  
+   - Lecturers → Submits Claims and Track claim  
+   - PCs → Review Claims and views claim history
+   - PMs → Approves claims and views claim history
 6. Logout → Returns to Login page.
 
+## Notes
+- This is a prototype only:  
+  - No database or authentication is implemented.  
+  - Registration and login do not persist data.  
+- Suitable for UI demonstration and project planning.  
+- Can later be extended with Entity Framework + Identity for full functionality.
 
 ## Author
 - Developed by Kgothatso Magwaza  
